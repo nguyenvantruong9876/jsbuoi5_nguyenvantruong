@@ -44,24 +44,24 @@ function tinhTien() {
 
     //Công thức
     if (0 < sokw && sokw <= 50) {
-        console.log("Giá 50 đầu")
+
         Thanhtien = sokw * Kw_dau50;
     } else if (50 < sokw && sokw <= 100) {
-        console.log("Giá 50 Kế Tiếp")
+
         Thanhtien = (50 * Kw_dau50) + ((sokw - 50) * Kw_ke50);
     } else if (100 < sokw && sokw <= 200) {
-        console.log("Giá 100 Kế Tiếp")
+
         Thanhtien = (50 * Kw_dau50) + (50 * Kw_ke50) * Kw_ke50 + (sokw - 100) * kw_ke100;
     } else if (200 < sokw && sokw <= 350) {
-        console.log("Giá 150 Kế Tiếp")
+      
         Thanhtien = (50 * Kw_dau50) + (50 * Kw_ke50) + (50 * kw_ke100) + (sokw - 200) * kw_ke150;
     } else if (350 < sokw) {
-        console.log("Giá Còn lại")
+
         Thanhtien = (50 * Kw_dau50) + (50 * Kw_ke50) + (50 * kw_ke100) + (50 * kw_ke150) + (sokw - 350) * Kw_conlai;
     } else {
         alert("Nhập số KM đi")
     }
 
-    document.getElementById("txtResulttiendien").innerHTML ="Họ Tên :" + hoten + ";Tiền điện :" + Thanhtien.toLocaleString();
+    document.getElementById("txtResulttiendien").innerHTML ="Họ Tên :" + hoten + "; Tiền điện :" + Thanhtien.toLocaleString();
 }
 document.getElementById("btntinhtien").onclick = tinhTien;
